@@ -1,0 +1,24 @@
+{
+  "name": "mongodb-atlas-backend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elis-11/mongodb-atlas-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elis-11/mongodb-atlas-back/issues"
+  },
+  "homepage": "https://github.com/elis-11/mongodb-atlas-back#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
