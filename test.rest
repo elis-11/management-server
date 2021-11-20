@@ -1,7 +1,9 @@
+@url = http://localhost:3022
+
 ### show all users
-GET http://localhost:3022
-content-type:applications/json
+GET {{url}}
+content-type: applications/json
 
 ### delete a user
-DELETE http://localhost:3022/deleteuser/user123
-content-type:application/json
+DELETE {{url}}/deleteuser/6198cc352701ff04cfd88b8f
+content-type: application/json
