@@ -15,7 +15,12 @@ const getData = async (done) => {
 
 app.get('/', (req, res) => {
 	getData(async (db) => {
-		const users = await db.collection('users100').find().toArray();
+		const users = await db.collection('users100').find()
+        .project({
+            name: 1,
+            username: 1,
+            email: 1
+        }).toArray();
 		res.json(users);
 	});
 });
