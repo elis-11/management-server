@@ -14,7 +14,7 @@ content-type: application/json
 
 {
     "user": {
-    "name": "Jim Smith",
+    "name": "Jim Smith", 
     "username": "Jim Smith",
     "email": "js@gmail.com"
     }
@@ -22,6 +22,7 @@ content-type: application/json
 
 ### update a user
 PATCH {{url}}/edituser/6198cc352701ff04cfd88b8b
+content-type: application/json
 
 {
     "email": "hjhdf@gmail.com"
