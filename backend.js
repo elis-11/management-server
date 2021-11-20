@@ -19,7 +19,8 @@ app.get('/', (req, res) => {
         .project({
             name: 1,
             username: 1,
-            email: 1
+            email: 1,
+            _id: 0
         }).toArray();
 		res.json(users);
 	});
