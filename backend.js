@@ -1,5 +1,6 @@
 import express from 'express';
 import mongodb, { MongoClient } from 'mongodb';
+// import cors from 'cors';
 
 const app = express();
 const port = 3022;
@@ -49,6 +50,20 @@ app.post('/adduser', (req, res) => {
 		});
 	});
 });
+
+app.patch('/edituser/:id', (req, res) => {
+	const id = req.params.id;
+	const email = req.body.email;
+	execMongo(async (db) => {
+		const updateResult = await db.
+        collection('users100').updateOne
+        ({ _id: new mongodb.ObjectId(id) }, { $set: { email } });
+		res.json({
+			result: updateResult 
+		});
+	});
+});
+
 
 app.listen(port, () => {
 	console.log(`listening on port http://localhost:${port}`);

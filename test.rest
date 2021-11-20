@@ -19,3 +19,10 @@ content-type: application/json
     "email": "js@gmail.com"
     }
 }
+
+### update a user
+PATCH {{url}}/edituser/6198cc352701ff04cfd88b8b
+
+{
+    "email": "hjhdf@gmail.com"
+}
