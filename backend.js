@@ -19,12 +19,16 @@ app.get('/', (req, res) => {
         .project({
             name: 1,
             username: 1,
-            email: 1,
-            _id: 0
+            email: 1
         }).toArray();
 		res.json(users);
 	});
 });
+
+app.delete('/deleteuser/:id', (req, res) => {
+    const id = req.params.id;
+    res.send(id )
+})
 
 app.listen(port, () => {
 	console.log(`listening on port http://localhost:${port}`);
