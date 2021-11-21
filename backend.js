@@ -2,14 +2,19 @@ import express from 'express';
 import mongodb, { MongoClient } from 'mongodb';
 import cors from 'cors';
 
+
 const app = express();
 const port = 3022;
-
+import dotenv from 'dotenv';
+dotenv.config()
+// const port = process.env.PORT || 3022;
+// const mongoConnectString = process.env.MONGODB_URI;
+// const client = new MongoClient(mongoConnectString);
 const mongoConnectString = 'mongodb://localhost:27017';
 const client = new MongoClient(mongoConnectString);
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 const execMongo = async (done) => {
 	await client.connect();
