@@ -1,16 +1,13 @@
 import express from 'express';
 import mongodb, { MongoClient } from 'mongodb';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
+dotenv.config()
 
 const app = express();
-const port = 3022;
-import dotenv from 'dotenv';
-dotenv.config()
-// const port = process.env.PORT || 3022;
-// const mongoConnectString = process.env.MONGODB_URI;
-// const client = new MongoClient(mongoConnectString);
-const mongoConnectString = 'mongodb://localhost:27017';
+const port = process.env.PORT || 3022;
+const mongoConnectString = process.env.MONGODB_URI;
 const client = new MongoClient(mongoConnectString);
 
 app.use(cors());
@@ -40,7 +37,9 @@ app.get('/', (req, res) => {
 app.delete('/deleteuser/:id', (req, res) => {
 	const id = req.params.id;
 	execMongo(async (db) => {
-		const deleteResult = await db.collection('users100').deleteOne({ _id: new mongodb.ObjectId(id) });
+		const deleteResult = await db
+		.collection('users100')
+		.deleteOne({ _id: new mongodb.ObjectId(id) });
 		res.json({
 			result: deleteResult
 		});
