@@ -25,10 +25,12 @@ app.get('/', (req, res) => {
 			.collection('users100')
 			.find()
 			.project({
+				_id: 1,
 				name: 1,
 				username: 1,
 				email: 1
 			})
+			.sort({ _id: -1 })
 			.toArray();
 		res.json(users);
 	});
