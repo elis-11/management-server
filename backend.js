@@ -58,17 +58,17 @@ app.post('/adduser', (req, res) => {
 	});
 });
 
-// app.get("/getuser/:id", (req, res) => {
-// 	const id = req.params.id;
-// 	execMongo(async (db) => {
-// 	  const user = await db
-// 		.collection("users100")
-// 		.find({ _id: new mongodb.ObjectId(id) })
-// 		.project({ _id: 1, name: 1, username: 1, email: 1 })
-// 		.toArray();
-// 	  res.json(user);
-// 	});
-//   });  
+app.get("/getuser/:id", (req, res) => {
+	const id = req.params.id;
+	execMongo(async (db) => {
+	  const user = await db
+		.collection("users100")
+		.find({ _id: new mongodb.ObjectId(id) })
+		.project({ _id: 1, name: 1, username: 1, email: 1 })
+		.toArray();
+	  res.json(user);
+	});
+  });  
 
 app.patch('/edituser/:id', (req, res) => {
 	const id = req.params.id;
