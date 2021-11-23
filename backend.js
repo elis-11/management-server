@@ -58,19 +58,33 @@ app.post('/adduser', (req, res) => {
 	});
 });
 
+// app.get("/getuser/:id", (req, res) => {
+// 	const id = req.params.id;
+// 	execMongo(async (db) => {
+// 	  const user = await db
+// 		.collection("users100")
+// 		.find({ _id: new mongodb.ObjectId(id) })
+// 		.project({ _id: 1, name: 1, username: 1, email: 1 })
+// 		.toArray();
+// 	  res.json(user);
+// 	});
+//   });  
+
 app.patch('/edituser/:id', (req, res) => {
 	const id = req.params.id;
 	const email = req.body.email;
 	execMongo(async (db) => {
 		const updateResult = await db.
-        collection('users100').updateOne
-        ({ _id: new mongodb.ObjectId(id) }, { $set: { email } });
+        collection('users100')
+		.updateOne
+        ({ _id: new mongodb.ObjectId(id) }, 
+		{ $set: { email } }
+		);
 		res.json({
 			result: updateResult 
 		});
 	});
 });
-
 
 app.listen(port, () => {
 	console.log(`listening on port http://localhost:${port}`);
