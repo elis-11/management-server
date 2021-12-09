@@ -1,0 +1,49 @@
+create---users100.json
+t.   less users100.json
+
+------------------------------
+sudo systemctl start mongod
+mongosh
+show dbs
+exit 
+mongoimport --db api001 --collection users100 --type json --file users100.json --jsonArray
+mongosh
+show dbs
+use api002
+show collections
+db.users100.find()
+db.users100.find().count()
+exit
+------------------
+git init
+.gitignore
+npm init -y
+"type": "module",
+create-backend.js
+npm i express
+npx nodemon backend.js
+npx run backend
+
+set up MongoDB client
+npm i mongodb
+import { MongoClient } from 'mongodb';
+const mongoConnectString = 'mongodb://localhost:27017';
+const client = new MongoClient(mongoConnectString);
+
+mongosh "mongodb+srv://cluster0.qqwpv.mongodb.net/myFirstDatabase" --username <username>
+mongosh "mongodb+srv://cluster0.qqwpv.mongodb.net/myFirstDatabase" --username user1
+mongosh "mongodb+srv://cluster0.qqwpv.mongodb.net/myFirstDatabase" --username user2
+
+mongodb+srv://mainuser:<password>@cluster0.ogshn.mongodb.net
+
+mongodb+srv://<username>:<password>@cluster0.qqwpv.mongodb.net/test
+mongodb+srv://user1:elis@cluster0.qqwpv.mongodb.net/test
+
+
+
+                   cluster0-shard-00-02.gzwcn.mongodb.net:27017
+mongoimport --host cluster0-shard-00-02.gzwcn.mongodb.net:27017 --db blogapp --collection articles --type json --file articles.json --jsonArray --authenticationDatabase admin --ssl --username user1
+mongoimport --host cluster0-shard-00-02.gzwcn.mongodb.net:27017 --db blogapp --collection articles --type json --file articles.json --jsonArray --authenticationDatabase admin --ssl --username user2
+                   cluster0-shard-00-02.gzwcn.mongodb.net:27017
+
+mongodb+srv://user1:elis@cluster0.gzwcn.mongodb.net/test

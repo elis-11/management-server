@@ -1,0 +1,71 @@
+sudo systemctl start mongod
+
+mkir mongo-atlas-backend
+  606  mkdir mongo-atlas-backend
+  607  cd mongo-a
+ cd mongo-atlas-backend/
+ code -r .
+ npm start
+ echo node_modules .env > .gitignore
+ mongoimport --db api001 --collection users100 --type json --file users100.json --jsonArray
+ echo node_modules .env > .gitignore
+ npm init -y
+ mongoimport --db api001 --collection users100 --type json --file users100.json --jsonArray
+ npm run backend
+ cd mongodb-atlas-backend/
+ less users100.json 
+ mongosh
+ sudo systemctl start mongod
+ mongoimport --db api001 --collection users100 --type json --file users100.json --jsonArray
+ mongoimport --db api002 --collection users100 --type json --file users100.json --jso
+ mongoimport --db api002 --collection users100 --type json --file users100.json --json
+ mongoimport --db api002 --collection users100 --type json --file users100.json --jsonArray
+ mongosh
+ npx nodemon backend.js
+ killall -s KILL node
+ pkill -f node
+ cd we
+ npm start
+ killall -9 node
+ npx nodemon backend.js
+ npx create-react-app .
+ npm start
+ npm i sass
+ npm start
+ npm i react-icons
+ npm audit fix
+ npm start
+ npm i cors
+ npm start
+ mongosh
+ npm start
+ npx nodemon backend.js
+ node backend.js
+ npm start
+ mongosh "mongodb+srv://cluster0.gzwcn.mongodb.net/myFirstDatabase" --username user1
+ ls
+ cd webs/
+ mkdir _tests
+ cd _tests/
+ mongosh "mongodb+srv://cluster0.gzwcn.mongodb.net/myFirstDatabase" --username user1
+ mongosh "mongodb+srv://cluster0.gzwcn.mongodb.net/myFirstDatabase" --username <username>
+ mongosh "mongodb+srv://cluster0.gzwcn.mongodb.net/myFirstDatabase" --username user1
+ cd ..
+ ls articles.json 
+ cd webs/
+ mkdir articles.json
+ cd articles.json/
+ mongoimport --db api001 --collection users100 --type json --file users100.json --jsonArray
+ mongoimport --db api002 --collection users100 --type json --file users100.json --jsonArray
+ mongosh
+ mongosh "mongodb+srv://cluster0.gzwcn.mongodb.net/myFirstDatabase" --username user1
+ ls articles.json 
+ mongoimport --host cluster0-shard-00-02.gzwcn.mongodb.net:27017--db blogapp --collection articles --type json --file articles.json --jsonArray --authenticationDatabase admin --ssl --username mainuser
+ mongoimport --host cluster0-shard-00-02.gzwcn.mongodb.net:27017--db blogapp --collection articles --type json --file articles.json --jsonArray --authenticationDatabase admin --ssl --username user1
+  
+   mongoimport --host cluster0-shard-00-02.gzwcn.mongodb.net:27017 --db api002 --collection users100 --type json --file users100.json --jsonArray --authenticationDatabase admin --ssl --username user1
+ mongosh
+ ls
+ ls users100.json 
+ history
+ mongoimport --db api002 --collection users100 --type json --file users100.json --jsonArray
