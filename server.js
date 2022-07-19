@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config()
 
 const app = express();
-const port = process.env.PORT || 3022;
+const PORT = process.env.PORT || 5000;
 const mongoConnectString = process.env.MONGODB_URI;
 const client = new MongoClient(mongoConnectString);
 
@@ -15,7 +15,7 @@ app.use(express.json());
 
 const execMongo = async (done) => {
 	await client.connect();
-	const db = client.db('api002');
+	const db = client.db('mern-management');
 	done(db);
 };
 
@@ -86,6 +86,6 @@ app.patch('/edituser/:id', (req, res) => {
 	});
 });
 
-app.listen(port, () => {
-	console.log(`listening on port http://localhost:${port}`);
+app.listen(PORT, () => {
+	console.log(`listening on PORT http://localhost:${PORT}`);
 });
