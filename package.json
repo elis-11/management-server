@@ -1,5 +1,5 @@
 {
-  "name": "mongodb-atlas-back",
+  "name": "management-server",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -10,7 +10,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elis-11/mongodb-atlas-back.git"
+    "url": "git+https://github.com/elis-11/management-server.git"
+
   },
   "keywords": [],
   "author": "",

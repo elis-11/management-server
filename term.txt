@@ -1,2 +1,2 @@
  mongoimport --db api001 --collection users100 --type json --file users100.json --jsonArray
- mongoimport --db api002 --collection users100 --type json --file users100.json --jsonArray
+ mongoimport --db mern-management --collection users100 --type json --file users100.json --jsonArray
